@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for Network Auto Login Service
+
+[Timer]
+OnActiveSec=10sec
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target

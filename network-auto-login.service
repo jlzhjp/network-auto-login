@@ -1,0 +1,12 @@
+[Unit]
+Description=Network Auto Login Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+Environment="NETWORK_LOGIN_USERNAME="
+Environment="NETWORK_LOGIN_PASSWORD="
+Environment="NETWORK_LOGIN_FWMARK=0x80000"
+
+ExecStart=/usr/local/bin/network-auto-login
